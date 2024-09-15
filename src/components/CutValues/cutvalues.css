@@ -1,0 +1,82 @@
+.cut {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../../assets/images/background2.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+.title {
+  font-family: var(--font-primary);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-family: var(--font-body);
+  width: 600px;
+  min-width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  min-width: 300px;
+  gap: 20px;
+}
+
+.values .option {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #faf7f2;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100px;
+  width: 400px;
+  min-width: 150px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.values .option div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.values .option div .title {
+  font-family: var(--font-secondary);
+  margin-bottom: 10px;
+  width: 100%;
+  min-width: 50px;
+}
+
+.values .option div .description {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: #7f7f7f;
+  width: 100%;
+}
+
+.values .option .price {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 1.3rem;
+}

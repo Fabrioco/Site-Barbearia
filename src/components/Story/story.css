@@ -1,0 +1,254 @@
+.story {
+  width: 100%;
+  height: 100vh;
+  background: url(../../assets/images/background3.jpg) no-repeat fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.history .text {
+  width: 40%;
+  height: 400px;
+}
+
+.text .title {
+  padding-top: 30px;
+  padding-left: 5px;
+  font-family: var(--font-primary);
+  border-left: 3px solid #f0b45b;
+  margin-bottom: 15px;
+}
+
+.text .description {
+  color: #a8a8a8;
+  font-family: var(--font-body);
+}
+
+.text .appointment {
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #f0b45b;
+  color: #f0b45b;
+}
+
+.timetable {
+  width: 250px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.timetable .border {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #f0b45b;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.timetable .pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timetable .info {
+  width: 200px;
+  height: 150px;
+  background-color: #ffffff;
+  color: #000;
+  position: absolute;
+  bottom: -30px;
+  left: -50px;
+  font-family: var(--font-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.timetable .info .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background-color: #f0b45b;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timetable .info .title {
+  font-family: var(--font-primary);
+  color: #a8a8a8;
+  margin-bottom: 10px;
+}
+
+.socialmedia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+
+.socialmedia .pics {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  position: relative;
+}
+
+.socialmedia .pics .small {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: -150px;
+  left: -150px;
+}
+
+.socialmedia .pics .border-big {
+  width: 300px;
+  height: 400px;
+  border: 1px solid #fff;
+  z-index: 3;
+  position: absolute;
+  bottom: -30px;
+  left: -20px;
+}
+
+.socialmedia .pics .big {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.socialmedia .contacts {
+  width: 40%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socialmedia .contacts h2 {
+  font-family: var(--font-primary);
+  border-left: 2px solid #f0b45b;
+  padding-left: 5px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.socialmedia .contacts p {
+  color: #a8a8a8;
+  font-family: var(--font-body);
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.socialmedia .contacts .info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  gap: 10px;
+}
+
+.contacts .info .address,
+.contacts .info .phone-contact {
+  background-color: #0b0b0b;
+  padding: 10px;
+  width: 50%;
+  height: 130px;
+  position: relative;
+}
+
+.contacts .info .address .icon,
+.contacts .info .phone-contact .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  background-color: #f0b45b;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -20px;
+  left: -15px;
+  box-shadow: 5px 5px 0 #fff;
+}
+
+.contacts .info .address p,
+.contacts .info .phone-contact p {
+  margin-top: 10px;
+  color: #a8a8a8;
+  font-family: var(--font-body);
+}
+
+.social-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-nav .icon {
+  background-color: #f0b45b;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 0 #fff;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.social-nav .icon:hover {
+  transform: translateY(-5px) translateX(-5px);
+  box-shadow: 10px 10px 0 #fff;
+  transition: all 300ms ease-in-out;
+}
+
+.social-nav .icon:active {
+  transform: translateY(5px) translateX(5px);
+  box-shadow: 0 0 0 #fff;
+  transition: all 100ms ease-in-out;
+
+}
+
+.social-nav .icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
