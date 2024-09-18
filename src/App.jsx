@@ -4,15 +4,20 @@ import Main from "./components/Main";
 import About from "./components/About";
 import Story from "./components/Story";
 import CutValues from "./components/CutValues";
+import { AppointmentProvider } from "./contexts/appointmentContext";
+import { ModalAppointment } from "./components/ModalAppointment";
 
 export default function App() {
   return (
     <div className="container">
-      <Header />
-      <Main />
-      <About />
-      <Story />
-      <CutValues />
+      <AppointmentProvider>
+        <Header />
+        <Main />
+        <About />
+        <Story />
+        <CutValues />
+        <ModalAppointment />
+      </AppointmentProvider>
     </div>
   );
 }

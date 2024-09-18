@@ -4,8 +4,15 @@ import { FaBrush } from "react-icons/fa";
 import { GiBeard } from "react-icons/gi";
 import { TbMoustache } from "react-icons/tb";
 import "./cutvalues.css";
+import { useAppointment } from "../../contexts/appointmentContext";
 
 export default function CutValues() {
+  const { toDoAppointment } = useAppointment();
+
+  const openModalAppointment = () => {
+    toDoAppointment();
+  };
+
   return (
     <div className="cut">
       <div className="line"></div>
@@ -66,7 +73,9 @@ export default function CutValues() {
           <p className="price">R$ 10.00</p>
         </div>
       </div>
-      <button className="appointment">Fazer Agendamento</button>
+      <button className="appointment" onClick={openModalAppointment}>
+        Fazer Agendamento
+      </button>
     </div>
   );
 }

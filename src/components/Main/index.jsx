@@ -1,8 +1,15 @@
 import React from "react";
 import "./main.css";
 import icon from "../../assets/images/icon.png";
+import { useAppointment } from "../../contexts/appointmentContext";
 
 export default function Main() {
+  const { toDoAppointment } = useAppointment();
+
+  const handleClickAppointment = () => {
+    toDoAppointment();
+  };
+
   return (
     <main className="main">
       <div className="content">
@@ -15,7 +22,9 @@ export default function Main() {
           temporibus accusantium.
         </p>
         <div className="btns">
-          <button className="appointment">Fazer Agendamento</button>
+          <button className="appointment" onClick={handleClickAppointment}>
+            Fazer Agendamento
+          </button>
           <button className="contact">Contate Nos</button>
         </div>
       </div>
