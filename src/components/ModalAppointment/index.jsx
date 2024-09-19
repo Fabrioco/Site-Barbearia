@@ -15,7 +15,27 @@ export function ModalAppointment() {
     setName,
     phone,
     setPhone,
+    handleAppointment,
+    verifyDay,
   } = useAppointment();
+
+  const [step, setStep] = React.useState(0);
+
+  const handleClick = async (dateHour) => {
+    const result = await handleAppointment(dateHour);
+
+    if (result) {
+      setStep(0);
+    }
+  };
+
+  const handleVerifyDay = async (day) => {
+    const result = await verifyDay(day);
+
+    if (result) {
+      setStep(1);
+    }
+  };
 
   return (
     <div className={isOpenedModal ? "modal active" : "modal"}>
@@ -37,7 +57,6 @@ export function ModalAppointment() {
             value={date}
             className="date"
           />
-          <button className="appointment">Proximo</button>
         </div>
 
         <div className="box-time">
@@ -57,35 +76,37 @@ export function ModalAppointment() {
           </select>
           <button
             className="appointment"
-            onClick={() => verifyDay(`${date}_${time}`)}
+            onClick={() => handleVerifyDay(`${date}_${time}`)}
           >
-            Proximo
+            Verificar disponibilidade
           </button>
         </div>
 
-        <div className="form">
-          <p className="title">Informações pessoais</p>
-          <input
-            type="text"
-            placeholder="Nome"
-            className="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="tel"
-            placeholder="Telefone"
-            className="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-          <button
-            className="appointment"
-            onClick={() => handleAppointment(`${date}_${time}`)}
-          >
-            Agendar
-          </button>
-        </div>
+        {step === 1 && (
+          <div className="form">
+            <p className="title">Informações pessoais</p>
+            <input
+              type="text"
+              placeholder="Nome"
+              className="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="tel"
+              placeholder="Telefone"
+              className="phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <button
+              className="appointment"
+              onClick={() => handleClick(`${date}_${time}`)}
+            >
+              Agendar
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

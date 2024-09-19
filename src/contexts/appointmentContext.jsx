@@ -1,6 +1,7 @@
 import React from "react";
 import { db } from "../services/firebaseConnection";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 export const AppointmentContext = React.createContext({});
 
@@ -12,31 +13,44 @@ export function AppointmentProvider({ children }) {
   const [time, setTime] = React.useState("");
 
   const verifyDay = async (day) => {
+    if (!date || !time) {
+      toast.error("Preencha todos os campos");
+      return;
+    }
     const docRef = doc(db, "dias_marcados", `${day}`);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      alert("Esse Horário ja foi marcado");
+      toast.error("Esse Horário ja foi marcado");
+      return false;
+    } else {
+      toast.success("Horário livre");
+      return true;
     }
   };
 
   const handleAppointment = async (dateHour) => {
     if (!date || !time || !name || !phone) {
-      alert("Preencha todos os campos");
+      toast.error("Preencha todos os campos");
       return;
     }
-    await setDoc(doc(db, "dias_marcados", `${dateHour}`), {
-      [dateHour]: name,
-    })
-      .then(() => {
-        setIsOpenedModal(false);
-        setName("");
-        setPhone("");
-        setDate("");
-        setTime("");
-      })
-      .catch((err) => {
-        console.log(err);
+
+    try {
+      await setDoc(doc(db, "dias_marcados", `${dateHour}`), {
+        [dateHour]: name,
       });
+
+      toast.success("Agendamento realizado com sucesso");
+      setIsOpenedModal(false);
+      setName("");
+      setPhone("");
+      setDate("");
+      setTime("");
+      return true;
+    } catch (err) {
+      toast.error("Erro ao agendar");
+      console.log(err);
+      return false;
+    }
   };
 
   const toDoAppointment = () => {
