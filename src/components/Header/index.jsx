@@ -12,13 +12,13 @@ export default function Header() {
       <nav className="nav">
         <ul>
           <li className="link">
-            <a href="">Sobre mim</a>
+            <a href="#about">Barbearia</a>
           </li>
           <li className="link">
-            <a href="">Serviços</a>
+            <a href="#story">História da Barbearia</a>
           </li>
           <li className="link">
-            <a href="">Contatos</a>
+            <a href="#cut">Cortes</a>
           </li>
         </ul>
       </nav>
