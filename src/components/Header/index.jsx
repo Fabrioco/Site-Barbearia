@@ -1,8 +1,24 @@
 import "./header.css";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlinePhone } from "react-icons/hi2";
+import { toast } from "react-toastify";
 
 export default function Header() {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("+19-91234-5678");
+
+    toast.success("Número copiado para a área de transferência!", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   return (
     <header className="header">
       <div className="logo">
@@ -29,7 +45,7 @@ export default function Header() {
           </i>
           Monte Mor
         </p>
-        <p className="phone">
+        <p className="phone" onClick={copyToClipboard}>
           <i>
             <HiOutlinePhone size={25} color="#F1B55B" />
           </i>
