@@ -25,7 +25,6 @@ export default function Main() {
           <button className="appointment" onClick={handleClickAppointment}>
             Fazer Agendamento
           </button>
-          <button className="contact">Contate Nos</button>
         </div>
       </div>
     </main>
