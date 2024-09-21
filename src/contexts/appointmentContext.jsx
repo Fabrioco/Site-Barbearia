@@ -2,6 +2,7 @@ import React from "react";
 import { db } from "../services/firebaseConnection";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import PropTypes from "prop-types";
 
 export const AppointmentContext = React.createContext({});
 
@@ -20,7 +21,7 @@ export function AppointmentProvider({ children }) {
     const docRef = doc(db, "dias_marcados", `${day}`);
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
-      toast.error("Esse Horário ja foi marcado");
+      toast.error("Esse Horário já foi marcado");
       return false;
     } else {
       toast.success("Horário livre");
@@ -80,4 +81,6 @@ export function AppointmentProvider({ children }) {
   );
 }
 
-export const useAppointment = () => React.useContext(AppointmentContext);
+AppointmentProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
