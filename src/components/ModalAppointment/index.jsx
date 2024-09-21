@@ -1,4 +1,4 @@
-import { useAppointment } from "../../contexts/appointmentContext";
+import { useAppointment } from "../../hooks/useAppointment";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import "./modalappointment.css";
 import React from "react";
