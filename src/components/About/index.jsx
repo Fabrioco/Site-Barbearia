@@ -1,4 +1,3 @@
-import React from "react";
 import corte1 from "../../assets/images/corte1.jpg";
 import corte2 from "../../assets/images/corte2.jpg";
 import corte3 from "../../assets/images/corte3.jpg";

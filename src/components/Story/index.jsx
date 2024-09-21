@@ -1,4 +1,3 @@
-import React from "react";
 import "./story.css";
 import pic from "../../assets/images/pic-story.jpg";
 import { CiTimer } from "react-icons/ci";
@@ -7,15 +6,9 @@ import big from "../../assets/images/big-story-pic.jpg";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlinePhone } from "react-icons/hi2";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
-import { useAppointment } from "../../contexts/appointmentContext";
+import { ButtonAppointment } from "../inputs/buttonDoAppointment";
 
 export default function Story() {
-  const { toDoAppointment } = useAppointment();
-
-  const openModal = () => {
-    toDoAppointment();
-  };
-
   return (
     <div className="story">
       <div className="history">
@@ -27,9 +20,7 @@ export default function Story() {
             quidem veniam laudantium eos, accusamus vero itaque? Doloribus
             repellat nostrum temporibus libero?
           </p>
-          <button className="appointment" onClick={openModal}>
-            Fazer Agendamento
-          </button>
+          <ButtonAppointment />
         </div>
         <div className="timetable">
           <div className="border"></div>
