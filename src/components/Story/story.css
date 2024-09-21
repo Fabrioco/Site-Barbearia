@@ -34,6 +34,7 @@
 .text .description {
   color: #a8a8a8;
   font-family: var(--font-body);
+  text-align: justify;
 }
 
 .text .appointment {
@@ -172,6 +173,7 @@
   font-family: var(--font-body);
   margin-bottom: 40px;
   width: 80%;
+  text-align: justify;
 }
 
 .socialmedia .contacts .info {
