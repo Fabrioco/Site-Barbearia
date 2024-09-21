@@ -1,4 +1,3 @@
-import React from "react";
 import "./main.css";
 import icon from "../../assets/images/icon.png";
 import { useAppointment } from "../../contexts/appointmentContext";
