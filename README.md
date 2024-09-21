@@ -21,5 +21,5 @@ Este projeto é um sistema de agendamento de horários para cortes de cabelo, de
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu_usuario/nome_do_repositorio.git
-   cd nome_do_repositorio
+   git clone https://github.com/Fabrioco/Site-Barbearia.git
+   cd agend-barb
