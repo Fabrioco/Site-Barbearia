@@ -12,10 +12,8 @@ export default function About() {
       <div className="line"></div>
       <h1 className="title">Bem vindo a nossa barbearia</h1>
       <p className="description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, ad
-        dignissimos beatae ut odio animi at ullam nostrum neque totam quae
-        expedita quasi debitis reprehenderit quod! Ipsum repellendus facilis
-        laudantium.
+        Um espaço feito para você relaxar enquanto cuida do seu visual. Sinta-se
+        em casa na nossa barbearia.
       </p>
       <div className="gallery">
         <div className="post">
@@ -23,8 +21,8 @@ export default function About() {
           <div className="text-overlay">
             <h3>Corte Masculino</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A fugit
-              debitis temporibus quos
+              Transforme seu visual com cortes modernos e personalizados. Aqui,
+              seu estilo é prioridade!
             </p>
           </div>
         </div>
@@ -34,8 +32,8 @@ export default function About() {
             <div className="text-overlay">
               <h3>Corte Infantil</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                fugit debitis temporibus
+                Os pequenos também merecem um estilo incrível. Traga seu filho
+                para um corte divertido e descolado.
               </p>
             </div>
           </div>
@@ -44,8 +42,8 @@ export default function About() {
             <div className="text-overlay">
               <h3>Bigode</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                fugit debitis temporibus
+                Deixe seu bigode impecável com nossos serviços de modelagem e
+                cuidados. Precisão e estilo para um visual marcante!
               </p>
             </div>
           </div>
@@ -54,8 +52,8 @@ export default function About() {
             <div className="text-overlay">
               <h3>Barba</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                fugit debitis temporibus
+                Cuide da sua barba com nossos serviços de barba e modelagem.
+                Elegância e precisão em cada detalhe.
               </p>
             </div>
           </div>
@@ -64,8 +62,8 @@ export default function About() {
             <div className="text-overlay">
               <h3>Pintura de cabelo</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-                fugit debitis temporibus
+                Utilizamos os melhores produtos do mercado para garantir que seu
+                cabelo e barba recebam o cuidado que merecem.
               </p>
             </div>
           </div>

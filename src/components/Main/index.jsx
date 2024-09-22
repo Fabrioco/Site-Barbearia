@@ -9,10 +9,8 @@ export default function Main() {
         <img src={icon} alt="icone" className="img" />
         <h1 className="title">Relaxe, Fique Bem, Sinta a Confiança</h1>
         <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et
-          tempora maxime animi ullam sequi, culpa asperiores nam obcaecati
-          ipsum. Autem voluptatem omnis saepe illo consequuntur nobis natus,
-          temporibus accusantium.
+          Seja bem vindo ao BarberShop, aqui somos uma familia que sempre
+          estamos antes de tudo.
         </p>
         <div className="btns">
           <ButtonAppointment />

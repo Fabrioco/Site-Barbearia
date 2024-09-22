@@ -38,7 +38,6 @@
   justify-content: center;
   margin-bottom: 20px;
   background-color: #faf7f2;
-  padding: 10px;
   border-radius: 10px;
   height: 100px;
   width: 400px;
@@ -49,34 +48,40 @@
   margin-bottom: 50px;
 }
 
+.values .option .icon {
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .values .option div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 65%;
-  align-items: center;
-  justify-content: center;
+  width: 80%;
   text-align: center;
-  padding-top: 10px;
-}
+  height: 100%;
+  margin-left: 10px;}
 
 .values .option div .title {
   font-family: var(--font-secondary);
   margin-bottom: 10px;
   width: 100%;
-  min-width: 50px;
 }
 
 .values .option div .description {
   font-family: var(--font-secondary);
   font-size: 1rem;
   color: #7f7f7f;
-  width: 100%;
+  width: 150px;
 }
 
 .values .option .price {
   font-family: var(--font-secondary);
   font-weight: 700;
-  font-size: 1.3rem;
-}
+  font-size: 1.1rem;
+  width: 20%;
+  }

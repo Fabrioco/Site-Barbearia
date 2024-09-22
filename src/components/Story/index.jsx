@@ -15,10 +15,10 @@ export default function Story() {
         <div className="text">
           <h1 className="title">História da Barbearia</h1>
           <p className="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            qui? Accusantium non quasi sint facilis, unde nesciunt consequatur
-            quidem veniam laudantium eos, accusamus vero itaque? Doloribus
-            repellat nostrum temporibus libero?
+            Nascemos com a paixão por transformar visual e oferecer uma
+            experiência única. Desde o primeiro corte, nosso compromisso é com a
+            qualidade e o bem-estar de cada cliente. Mais que uma barbearia,
+            somos um espaço de estilo e confiança.
           </p>
           <ButtonAppointment />
         </div>
@@ -31,7 +31,6 @@ export default function Story() {
             </i>
             <span className="title">Horarios Abertos</span>
             <p>Seg-Sex 08:00 - 10:00</p>
-            <p>Seg-Sex 10:00 - 22:00</p>
           </div>
         </div>
       </div>
@@ -44,8 +43,8 @@ export default function Story() {
         <div className="contacts">
           <h2>Entre em Contato conosco</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse ipsa
-            magni, omnis reprehenderit et blanditiis minus ducimus
+            Quer agendar um horário ou tirar dúvidas? Fale com a gente! Estamos
+            prontos para atendê-lo pelo WhatsApp, telefone ou redes sociais
           </p>
           <div className="info">
             <div className="address">
@@ -53,7 +52,7 @@ export default function Story() {
                 <IoLocationOutline size={25} color="#fff" />
               </i>
               <p>Monte Mor</p>
-              <p>rua com endereco completo</p>
+              <p>Rua Beato João XXIII</p>
             </div>
             <div className="phone-contact">
               <i className="icon">
