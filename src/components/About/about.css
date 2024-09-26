@@ -2,14 +2,16 @@
   width: 100%;
   background: url(../../assets/images/background2.jpg) no-repeat fixed center;
   background-size: cover;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 80px;
 }
 
 .line {
+  margin-top: 30px;
   height: 50px;
   width: 2px;
   background-color: #f0b45b;
@@ -22,8 +24,8 @@
 
 .about .description {
   font-family: var(--font-secondary);
-  width: 600px;
-  min-width: 300px;
+  width: 50%;
+  margin-bottom: 50px;
 }
 
 .about .gallery {
@@ -57,19 +59,20 @@
 }
 
 .gallery .post:nth-child(1) {
+  width: 80%;
   height: 100%;
 }
 
 .posts .post:nth-child(1),
 .posts .post:nth-child(4) {
-  flex: 1 0 280px;
+  flex: 1 0 60%;
   height: 50%;
   position: relative;
 }
 
 .posts .post:nth-child(2),
 .posts .post:nth-child(3) {
-  flex: 1 0 220px;
+  flex: 1 0 35%;
   height: 50%;
   position: relative;
 }
@@ -110,4 +113,36 @@
 .text-overlay:hover > p {
   display: block;
   transition: all 300ms ease;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery .post {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery .posts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posts .post:nth-child(1),
+  .posts .post:nth-child(4),
+  .posts .post:nth-child(2),
+  .posts .post:nth-child(3) {
+    width: 50%;
+    height: 100px;
+  }
+
+  .post .text-overlay {
+    width: 90%;
+  }
+
+  .post .text-overlay h3 {
+    font-size: 1rem;
+  }
 }
