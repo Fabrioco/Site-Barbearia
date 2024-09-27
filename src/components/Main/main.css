@@ -17,9 +17,10 @@
 }
 
 .content .img {
-  width: 400px;
-  min-width: 150px;
-  height: 400px;
+  max-width: 400px;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
   min-height: 150px;
 }
 
@@ -34,8 +35,9 @@
 .content .description {
   color: #cbcbcb;
   font-family: var(--font-body);
- width: 50%;
+  width: 50%;
   height: auto;
+  text-align: center;
   line-height: 25px;
   margin-bottom: 30px;
 }

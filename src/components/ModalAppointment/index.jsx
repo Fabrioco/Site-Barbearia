@@ -49,38 +49,42 @@ export function ModalAppointment() {
           necessário o barbeiro entrara em contato.
         </p>
 
-        <div className="box-date">
-          <p className="title">Selecione o dia</p>
-          <input
-            type="date"
-            onChange={(e) => setDate(e.target.value)}
-            value={date}
-            className="date"
-          />
-        </div>
+        {window.innerWidth < 768 && step === 0 && (
+          <>
+            <div className="box-date">
+              <p className="title">Selecione o dia</p>
+              <input
+                type="date"
+                onChange={(e) => setDate(e.target.value)}
+                value={date}
+                className="date"
+              />
+            </div>
 
-        <div className="box-time">
-          <p className="title">Horários</p>
-          <select
-            name="time"
-            id="time"
-            className="time"
-            onChange={(e) => setTime(e.target.value)}
-            value={time}
-          >
-            <option value="">Selecione um horário</option>
-            <option value="08-00">08:00</option>
-            <option value="09-00">09:00</option>
-            <option value="10-00">10:00</option>
-            <option value="11-00">11:00</option>
-          </select>
-          <button
-            className="appointment"
-            onClick={() => handleVerifyDay(`${date}_${time}`)}
-          >
-            Verificar disponibilidade
-          </button>
-        </div>
+            <div className="box-time">
+              <p className="title">Horários</p>
+              <select
+                name="time"
+                id="time"
+                className="time"
+                onChange={(e) => setTime(e.target.value)}
+                value={time}
+              >
+                <option value="">Selecione um horário</option>
+                <option value="08-00">08:00</option>
+                <option value="09-00">09:00</option>
+                <option value="10-00">10:00</option>
+                <option value="11-00">11:00</option>
+              </select>
+              <button
+                className="appointment"
+                onClick={() => handleVerifyDay(`${date}_${time}`)}
+              >
+                Verificar disponibilidade
+              </button>
+            </div>
+          </>
+        )}
 
         {step === 1 && (
           <div className="form">

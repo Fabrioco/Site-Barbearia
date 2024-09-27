@@ -31,7 +31,7 @@ export default function Header() {
             <a href="#about">Barbearia</a>
           </li>
           <li className="link">
-            <a href="#story">História da Barbearia</a>
+            <a href="#story">História</a>
           </li>
           <li className="link">
             <a href="#cut">Cortes</a>
