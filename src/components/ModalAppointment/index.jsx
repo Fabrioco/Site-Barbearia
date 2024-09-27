@@ -21,6 +21,15 @@ export function ModalAppointment() {
 
   const [step, setStep] = React.useState(0);
 
+  const closeModal = () => {
+    setIsOpenedModal(false);
+    setStep(0);
+    setName("");
+    setPhone("");
+    setDate("");
+    setTime("");
+  };
+
   const handleClick = async (dateHour) => {
     const result = await handleAppointment(dateHour);
 
@@ -40,7 +49,7 @@ export function ModalAppointment() {
   return (
     <div className={isOpenedModal ? "modal active" : "modal"}>
       <div className="content">
-        <i className="close" onClick={() => setIsOpenedModal(false)}>
+        <i className="close" onClick={closeModal}>
           <IoCloseCircleOutline size={40} color="#F1B55B" />
         </i>
         <h1 className="title">Fazer Agendamento</h1>
